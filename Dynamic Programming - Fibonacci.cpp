@@ -1,7 +1,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
-vector <long long> memo(100, -1);
+
 
 /*fibonacci without memoziation*/
 long long fibonacci(int n)
@@ -14,6 +14,7 @@ long long fibonacci(int n)
 /*fibonacci with memoziation - dynamic solution*/
 long long fibonacci_memo(int n)
 {
+	static vector <long long>memo (200, -1);
 	memo[0] = 1;
 	memo[1] = 1;
 	
